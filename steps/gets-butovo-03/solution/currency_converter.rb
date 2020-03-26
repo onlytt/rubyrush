@@ -7,11 +7,15 @@ case currency
 when 1
   puts "Выбрана гривна. Введите курс продажи доллара."
   usd_sale_rate = gets.chomp.to_f
-  puts "Введите кол-во гривен для конвертации."
+  puts "Введите кол-во гривен для конвертации в доллары."
   uah = gets.chomp.to_f
   puts "Ваши запасы на сегодня равны: #{ (uah / usd_sale_rate).round(2) } usd."
 when 2
-  #TODO
+  puts "Выбран доллар. Введите курс покупки доллара."
+  usd_sale_rate = gets.chomp.to_f
+  puts "Введите кол-во долларов для конвертации в гривну."
+  uah = gets.chomp.to_f
+  puts "Ваши запасы на сегодня равны: #{ (uah * usd_sale_rate).round(2) } грн."
 else
   puts "Неверная валюта. Попробуй еще раз запустить программу."
 end
